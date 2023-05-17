@@ -2,6 +2,7 @@ import { ToDoListDTO } from './../dtos/ToDoListDTO';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { ToDoCreateDTO } from '../dtos/ToDoCreateDTO';
 
 @Injectable({
   providedIn: 'root',
@@ -14,6 +15,10 @@ export class ToDoService {
 
   findAll(): Observable<ToDoListDTO[]> {
     return this.http.get<ToDoListDTO[]>(this.api);
+  }
+
+  create(body: ToDoCreateDTO): Observable<void> {
+    return this.http.post<void>(`${this.api}`, body);
   }
 
   done(id: number): Observable<void> {

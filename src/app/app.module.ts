@@ -4,20 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { RadapeComponent } from './radape/radape.component';
-import { FormListComponent } from './list/form-list/form-list.component';
-import { TableListComponent } from './list/table-list/table-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormTableListComponent } from './list/form-table-list/form-table-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabecalhoComponent,
     RadapeComponent,
-    FormListComponent,
-    TableListComponent,
+    FormTableListComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     MatTableModule,
     MatIconModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

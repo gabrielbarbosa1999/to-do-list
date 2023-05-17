@@ -38,4 +38,20 @@ form button {
   padding: 5px;
   margin-top: 5px;
   border-radius: 5px;
+  transition: all 1s;
+}
+
+form button:disabled {
+  background-color: #a64607;
+}
+
+.table table {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+mat-icon:hover {
+  cursor: pointer;
 }

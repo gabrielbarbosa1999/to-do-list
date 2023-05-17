@@ -1,4 +1,29 @@
 <section>
+  <div class="form">
+    <form>
+      <h5>Register to do</h5>
+      <input
+        class="to-do"
+        type="text"
+        name="to-do"
+        matInput
+        placeholder="To do"
+        [formControl]="toDoControl"
+        required
+      />
+      <br />
+      <button
+        type="submit"
+        [disabled]="toDoControl.invalid"
+        (click)="addToDo()"
+      >
+        Add to-do
+      </button>
+    </form>
+  </div>
+</section>
+
+<div class="table">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -41,4 +66,4 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
-</section>
+</div>
