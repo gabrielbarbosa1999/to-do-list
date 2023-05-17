@@ -8,6 +8,8 @@ import { FormListComponent } from './list/form-list/form-list.component';
 import { TableListComponent } from './list/table-list/table-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     FormListComponent,
     TableListComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    MatTableModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
