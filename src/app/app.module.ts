@@ -7,6 +7,7 @@ import { RadapeComponent } from './radape/radape.component';
 import { FormListComponent } from './list/form-list/form-list.component';
 import { TableListComponent } from './list/table-list/table-list.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { FormsModule } from '@angular/forms';
     FormListComponent,
     TableListComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
