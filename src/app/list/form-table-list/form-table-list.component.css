@@ -25,7 +25,6 @@ form .to-do {
   border: 1px solid #ee660c;
   border-radius: 5px;
   outline: none;
-  text-transform: uppercase;
 }
 
 form button {
