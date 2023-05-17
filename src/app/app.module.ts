@@ -6,6 +6,7 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { RadapeComponent } from './radape/radape.component';
 import { FormListComponent } from './list/form-list/form-list.component';
 import { TableListComponent } from './list/table-list/table-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,12 +14,10 @@ import { TableListComponent } from './list/table-list/table-list.component';
     CabecalhoComponent,
     RadapeComponent,
     FormListComponent,
-    TableListComponent
+    TableListComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
